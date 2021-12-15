@@ -1,0 +1,44 @@
+/**!
+ * Theme Name: Smith Brothers Media Default Theme
+ * Author: Smith Brothers Media <developer@smithbrothersmedia.com.au>
+ * Author URI: https://smithbrothersmedia.com.au/
+ */
+
+
+/* Import our custom styles */
+
+@import './vendor.scss';
+@import './variables.scss';
+@import './custom_style.scss';
+
+/* Import our parts */
+
+//@import './header.scss';
+
+/* Import our block styles here
+ * All files in the /blocks folder are imported by Gulp after this file
+*/
+
+@import './blocks/example';
+@import './blocks/header';
+@import './blocks/footer';
+@import './blocks/Highlight-bar';
+@import './blocks/plain-content';
+@import './blocks/page-header';
+@import './blocks/feature-content';
+@import './blocks/Feature-grid';
+@import './blocks/Trams-story';
+@import './blocks/News-events';
+@import './blocks/Frequently-asked-questions';
+@import './blocks/Our-staff';
+@import './blocks/international-symposiums';
+@import './blocks/our-story';
+@import './blocks/patient-stories';
+@import './blocks/Text-grid';
+@import './blocks/Action_bar';
+@import './blocks/Patient-forums';
+@import './blocks/Contact-us';
+@import './blocks/Global-collaborative';
+@import './blocks/Resource-heading';
+@import './blocks/Resource-content';
+@import './blocks/Blog';

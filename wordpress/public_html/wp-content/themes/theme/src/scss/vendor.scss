@@ -1,0 +1,13 @@
+/**
+* Import vendor styles here
+*/
+
+// Vendor Overrides
+
+$slick-font-path: '/wp-content/themes/theme/src/vendor/slickslider/fonts/';
+
+// Import Vendor
+@import '../vendor/boostrap/scss/bootstrap.scss';
+@import '../vendor/slickslider/slick.scss';
+
+/* trigger rebuild */

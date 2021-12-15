@@ -1,0 +1,166 @@
+.our_staff {
+    padding-bottom: 15px;
+    &__title {
+        padding-bottom: 55px;
+    }
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        &__wrap {
+            width: 33.33%;
+            border-right: 2px dotted $dark-gray;
+            border-top: 2px dotted $dark-gray;
+            padding: 70px 39px;
+            &:nth-child(3n + 3) {
+                border-right: 0px;
+                padding-right: 0;
+            }
+            &:nth-child(3n + 1) {
+                padding-left: 0;
+            }
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                border-top: 0px;
+                padding-top: 0;
+            }
+            &__inner {
+                font-size: 18px;
+                font-family: $primary_font_family;
+                line-height: 27px;
+                &__image {
+                    width: 150px;
+                    height: 150px;
+                    overflow: hidden;
+                    margin-bottom: 24px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 100%;
+                    }
+                }
+                h5 {
+                    padding-bottom: 8px !important;
+                    font-size: 18px;
+                    line-height: 27px;
+                    font-family: $SemiBold_font_family;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    .container {
+        .row {
+            padding-bottom: 75px;
+            border-bottom: 2px dotted $dark-gray;
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .our_staff {
+        &__wrapper {
+            margin: 0 0;
+            &__wrap {
+                width: 50%;
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3) {
+                    border-top: 2px dotted $dark-gray;
+                }
+                &:nth-child(3n + 3) {
+                    border-right: 2px dotted $dark-gray;
+                    padding-top: 70px;
+                }
+                &:nth-child(2n + 2) {
+                    border-right: 0px;
+                    padding-right: 0;
+                    padding-left: 39px;
+                }
+                &:nth-child(odd) {
+                    padding-left: 0;
+                    padding-right: 39px;
+                }
+                &:nth-child(1),
+                &:nth-child(2) {
+                    border-top: 0px;
+                    padding-top: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .our_staff {
+        padding: 50px 0;
+        background-color: $footer-grey;
+        &__wrapper {
+            &__wrap {
+                padding: 0 !important;
+                border-top: 0px !important;
+                border-right: 0px !important;
+                &__inner {
+                    font-size: 15px;
+                    line-height: 22px;
+                    h5 {
+                        font-size: 15px;
+                        line-height: 22px;
+                        letter-spacing: 0.5px;
+                        padding-bottom: 18px !important;
+                        padding-left: 15px !important;
+
+                    }
+                    p{
+                        padding-left: 15px !important;
+                    }
+                }
+            }
+        }
+        .slick-arrow {
+            top: 52%;
+            &.slick-next {
+                right: -25px !important;
+                &::after {
+                    transform: rotate(0);
+                    background: url(./assets/images/left-arrow-our-team.png) no-repeat center;
+                    width: 20px;
+                }
+            }
+            &.slick-prev {
+                left: -25px !important;
+                &::after {
+                    width: 20px;
+                    background: url(./assets/images/right-arrow-our-team.png) no-repeat center;
+                }
+            }
+            &.slick-disabled {
+                opacity: 0.5;
+            }
+        }
+        .slick-dots {
+            bottom: auto;
+            top: -135px;
+            justify-content: center;
+            display: flex;
+            li {
+                margin: 0 3px;
+                button {
+                    background-color: $light-grey;
+                    width: 24px;
+                    height: 6px;
+                    border-radius: 0px;
+                    opacity: 1;
+                }
+                &.slick-active {
+                    button {
+                        background-color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+}

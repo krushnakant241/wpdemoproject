@@ -1,0 +1,106 @@
+.text_grid {
+    padding-top: 57px;
+    &__main {
+        padding-bottom: 80px;
+    }
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: 50px;
+        padding-bottom: 70px;
+        &__wrap {
+            width: 33.33%;
+            border-right: 2px dotted $dark-gray;
+            border-top: 2px dotted $dark-gray;
+            padding: 70px 39px;
+            &:nth-child(3n + 3) {
+                border-right: 0px;
+                padding-right: 0;
+            }
+            &:nth-child(3n + 1) {
+                padding-left: 0;
+            }
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                border-top: 0px;
+                padding-top: 0;
+            }
+            &__inner {
+                font-size: 18px;
+                font-family: $primary_font_family;
+                line-height: 27px;
+                .title {
+                    a {
+                        text-decoration: underline;
+                        padding-bottom: 24px;
+                        display: inline-block;
+                        font-family: $SemiBold_font_family;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .text_grid {
+        &__wrapper {
+            margin: 0 0;
+            &__wrap {
+                width: 50%;
+                &:nth-child(1),
+                &:nth-child(2),
+                &:nth-child(3) {
+                    border-top: 2px dotted $dark-gray;
+                }
+                &:nth-child(3n + 3) {
+                    border-right: 2px dotted $dark-gray;
+                    padding-top: 70px;
+                }
+                &:nth-child(2n + 2) {
+                    border-right: 0px;
+                    padding-right: 0;
+                    padding-left: 39px;
+                }
+                &:nth-child(odd) {
+                    padding-left: 0;
+                    padding-right: 39px;
+                }
+                &:nth-child(1),
+                &:nth-child(2) {
+                    border-top: 0px;
+                    padding-top: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .text_grid {
+        &__main {
+            padding-bottom: 29px;
+        }
+        &__wrapper {
+            &__wrap {
+                width: 100%;
+                border-right: 0px !important;
+                border-top: 0 !important;
+                border-bottom: 1px dotted $dark-gray;
+                padding: 50px 0 !important;
+                &:nth-child(1) {
+                    border-top: 1px dotted $dark-gray !important;
+                }
+                &__inner {
+                    .title {
+                        a {
+                            line-height: 22px;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

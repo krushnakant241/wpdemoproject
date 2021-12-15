@@ -1,0 +1,160 @@
+.news_events {
+    padding: 80px 0;
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        &__inner {
+            padding: 0 15px;
+            &__image {
+                height: 535px;
+                position: relative;
+                border-radius: 20px;
+                overflow: hidden;
+                .content {
+                    position: absolute;
+                    bottom: 0;
+                    background: url(./assets/images/news_events.png) no-repeat;
+                    background-size: cover;
+                    height: 264px;
+                    padding: 30px 105px 50px 90px;
+                    width: 100%;
+                    border-bottom-right-radius: 20px;
+                    >strong {
+                        font-size: 18px;
+                        font-family: $Medium_font_family;
+                        color: $white;
+                        text-shadow: 0px -3px 3.5px rgba(0, 0, 0, 0.5);
+                        text-transform: uppercase;
+                    }
+                    h3,
+                    .date {
+                        color: $white;
+                        text-shadow: 0px -3px 3.5px rgba(0, 0, 0, 0.5);
+                        text-transform: uppercase;
+                        font-family: $Bold_font_family;
+                    }
+                    h3 {
+                        display: -webkit-box;
+                        -webkit-line-clamp: 2;
+                        -webkit-box-orient: vertical;
+                        overflow: hidden;
+                        +.button {
+                            margin-top: 49px;
+                        }
+                        +span {
+                            margin-top: 91px;
+                        }
+                        +p {
+                            margin-top: 50px !important;
+                            margin-bottom: 18px !important;
+                        }
+                    }
+                    .date {
+                        font-size: 24px;
+                        line-height: 24px;
+                        padding: 5px 0 20px;
+                        +span {
+                            margin-top: 44px;
+                        }
+                    }
+                    span {
+                        font-size: 10px;
+                        line-height: 36px;
+                        color: $white;
+                        display: inline-block;
+                        width: 100%;
+                    }
+                    .text {
+                        font-size: 18px;
+                        font-family: $Bold_font_family;
+                        line-height: 25px;
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+    &__title {
+        padding-bottom: 35px;
+        h3 {
+            font-family: $SemiBold_font_family;
+        }
+    }
+    &__page_link {
+        padding-top: 50px;
+        a {
+            font-size: 18px;
+            line-height: 24px;
+            font-family: $SemiBold_font_family;
+            color: $primary-color;
+            text-decoration: none;
+            transition: all 400ms ease;
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+}
+
+@media(max-width:1199px) {
+    .news_events {
+        &__wrapper {
+            margin: 0 0;
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .news_events {
+        &__wrapper {
+            &__inner {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .news_events {
+        padding: 0px 0 50px;
+        &__wrapper {
+            .slick-prev {
+                left: -14px !important;
+            }
+            .slick-next {
+                right: -14px !important;
+            }
+            &__inner {
+                width: 100%;
+                &__image {
+                    .content {
+                        background: url(./assets/images/mobile-trams-story_bg.png) no-repeat;
+                        background-size: 100% 100%;
+                        padding: 20px;
+                        padding-top: 30px;
+                        span {
+                            line-height: normal;
+                            padding-top: 10px;
+                        }
+                        h3 {
+                            font-size: 24px !important;
+                        }
+                        strong {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+        &__page_link {
+            padding-top: 14px;
+            a {
+                font-size: 15px;
+            }
+        }
+    }
+    .news_events__wrapper__inner {
+        padding: 0;
+    }
+}

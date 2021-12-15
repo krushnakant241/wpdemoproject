@@ -1,0 +1,119 @@
+/*feature_content */
+
+.feature_content {
+    &_image_mobile {
+        display: none;
+    }
+    padding: 80px 0 190px;
+    background-repeat: no-repeat;
+    &__wrapper {
+        &__text {
+            ul {
+                li {
+                    padding-bottom: 10px;
+                    font-size: 18px;
+                    font-family: $primary_font_family;
+                    position: relative;
+                    padding-left: 21px;
+                    &:before {
+                        content: '>';
+                        display: inline-block;
+                        position: absolute;
+                        left: 0;
+                    }
+                }
+            }
+            h2 {
+                padding-bottom: 40px !important;
+            }
+            h3 {
+                padding-bottom: 20px !important;
+            }
+        }
+        &.left_align {
+            width: 38%;
+        }
+        &.right_align {
+            margin-left: auto;
+        }
+        &__title {
+            .button {
+                margin: 38px 0 0;
+            }
+        }
+    }
+}
+
+@media(max-width:1199px) {
+    .feature_content {
+        padding: 80px 0 100px;
+    }
+}
+
+@media(max-width:991px) {
+    .feature_content__wrapper.left_align {
+        width: 100%;
+    }
+    .feature_content {
+        background-image: none !important;
+        &__wrapper {
+            width: 80%;
+            margin-left: unset !important;
+        }
+        .feature_content_image_mobile {
+            display: block;
+            height: 300px;
+            margin-bottom: 30px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .feature_content {
+        padding: 0 0 !important;
+        background-image: none !important;
+        &_image_mobile {
+            display: block;
+            width: 100%;
+            height: 300px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        &__wrapper {
+            width: 100%;
+            padding: 30px 0 50px;
+            &__title {
+                border-bottom: 1px dashed #000;
+                padding-bottom: 50px;
+            }
+            &__text {
+                h2 {
+                    padding-bottom: 10px !important;
+                }
+                h3 {
+                    font-size: 15px !important;
+                    line-height: 22px !important;
+                    font-family: $Medium_font_family;
+                    padding-bottom: 10px !important;
+                }
+                ul {
+                    li {
+                        font-size: 15px;
+                        line-height: 22px;
+                    }
+                }
+            }
+        }
+    }
+    .feature_content__wrapper.left_align {
+        width: 100%;
+    }
+}

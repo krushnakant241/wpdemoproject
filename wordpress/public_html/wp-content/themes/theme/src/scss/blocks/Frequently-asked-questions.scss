@@ -1,0 +1,132 @@
+.frequentlyasked-questions {
+    padding-top: 70px;
+    padding-bottom: 75px;
+    .accordion {
+        .card {
+            border: none;
+            border-bottom: 2px dotted $dark-gray;
+            padding: 22px 0;
+            border-radius: 0px;
+            .card-header {
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                h2 {
+                    position: relative;
+                    padding-left: 40px !important;
+                    &::before {
+                        content: '';
+                        background-image: $base-gradient-color;
+                        height: 40px;
+                        width: 40px;
+                        position: absolute;
+                        border-radius: 100%;
+                        left: 0;
+                    }
+                }
+                a {
+                    font-size: 24px;
+                    line-height: 24px;
+                    font-family: $Medium_font_family;
+                    color: $black;
+                    position: relative;
+                    text-decoration: none;
+                    outline: none;
+                    width: 100%;
+                    text-align: left;
+                    &:focus {
+                        outline: none;
+                        box-shadow: none;
+                    }
+                    &:after,
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        width: 20px;
+                        height: 4px;
+                        background-color: $white;
+                        left: -31px;
+                        top: 12px;
+                        transition: all 400ms ease;
+                    }
+                    &:after {
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+            .card-body {
+                color: $black;
+                font-size: 18px;
+                font-family: $primary_font_family;
+                line-height: 27px;
+                padding: 0 0 0 50px;
+            }
+        }
+    }
+    .button {
+        padding-top: 50px;
+        a {
+            font-family: $Bold_font_family;
+        }
+    }
+}
+
+.frequentlyasked-questions {
+    .accordion {
+        .card.active {
+            .card-header {
+                a {
+                    &::after {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:575px) {
+    .frequentlyasked-questions {
+        .accordion {
+            .card {
+                .card-header {
+                    a {
+                        font-size: 15px;
+                        line-height: 24px;
+                    }
+                }
+            }
+            .card-body {
+                font-size: 15px !important;
+                line-height: 27px !important;
+            }
+        }
+        .button {
+            a {
+                padding: 4px 12px;
+                font-size: 15px;
+            }
+        }
+    }
+    .frequentlyasked-questions {
+        .accordion {
+            .card {
+                .card-header {
+                    a {
+                        &::after,
+                        &:before {
+                            top: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .frequentlyasked-questions .accordion .card .card-body{
+        padding-left: 0px;
+        padding-top: 10px;
+    }
+    .frequentlyasked-questions .accordion .card .card-header a{
+        padding-right: 0px;
+    }
+}

@@ -1,0 +1,119 @@
+.blog {
+    .trams-news-event-list-section {
+        .trams_filter_show {
+            padding-top: 50px;
+        }
+        &.blog_section_in {
+            padding-bottom: 40px;
+        }
+        .filte_label {
+            padding-bottom: 15px;
+            font-size: 18px;
+            font-family: $Medium_font_family;
+            font-weight: 500;
+        }
+        .list_posts_category {
+            position: relative;
+            max-width: 210px;
+            margin-bottom: 0 !important;
+            svg {
+                height: 26px;
+                width: 24px;
+                color: $primary-color;
+                position: absolute;
+                right: 5px;
+                top: 50%;
+                transform: translateY(-50%);
+                pointer-events: none;
+            }
+        }
+        .postform {
+            border: 1px solid #5D5D5D;
+            padding: 10px 7px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            line-height: normal;
+            width: 210px;
+            outline: none;
+            font-size: 19px;
+        }
+    }
+    .blog_inner_content {
+        width: 50%;
+        color: $white;
+        .news_events__wrapper__inner__image {
+            .content {
+                padding: 30px;
+                height: 336px !important;
+                .content_excerpt {
+                    padding: 20px 0 20px;
+                    .button {
+                        padding: 20px 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.trams-single-post {
+    padding: 50px 0;
+    .feature_content {
+        padding: 0 0;
+        .feature_content__wrapper {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .blog {
+        .blog_inner_content {
+            .news_events__wrapper__inner__image {
+                .content {
+                    overflow: scroll;
+                }
+            }
+        }
+    }
+}
+
+.trams-post-pagignation {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 40px;
+    .page-numbers {
+        height: 40px !important;
+        width: 40px !important;
+        background-color: $primary-color;
+        color: $white;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        margin: 0 5px;
+        line-height: 40px;
+    }
+    .next.page-numbers,
+    .prev.page-numbers {
+        font-size: 0;
+        &:before {
+            content: '>';
+            display: inline-block;
+            font-size: 17px;
+        }
+    }
+    .prev.page-numbers {
+        &:before {
+            content: '<';
+        }
+    }
+}
+
+.trams-news-event-list-section {
+    .news_events__wrapper {
+        padding-top: 50px;
+    }
+}

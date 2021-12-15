@@ -1,0 +1,48 @@
+/* Highlight bar */
+
+.highlight_bar {
+    background-image: $base-gradient-color;
+    padding: 30px 0;
+    h2 {
+        color: $white;
+    }
+    p {
+        font-family: $Barlow-MediumItalic-font;
+        color: $white;
+        font-size: 26px;
+        line-height: 36px;
+        font-style: italic;
+    }
+    .author_name {
+        text-align: right;
+        padding-top: 33px;
+        span {
+            color: $white;
+            font-family: $Barlow-Medium-font;
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+}
+
+.expanded_highlighbar {
+    padding-top: 90px;
+    padding-bottom: 50px;
+}
+
+@media (max-width:767px) {
+    .highlight_bar.expanded_highlighbar {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        p {
+            font-size: 15px;
+            line-height: 22px;
+        }
+        .author_name {
+            span {
+                font-size: 15px;
+                line-height: 38px;
+            }
+        }
+    }
+}

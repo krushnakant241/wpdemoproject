@@ -1,0 +1,62 @@
+.patient-stories {
+    .patient-stories__wrapper_heading {
+        padding-top: 70px;
+        border-top: 2px dotted $dark-gray;
+        h2 {
+            padding-bottom: 40px !important;
+        }
+    }
+    .patient-stories__wrap {
+        position: relative;
+    }
+    .patient-stories__wrapper_pagelink {
+        padding: 45px 0 80px;
+        svg {
+            color: $primary-color;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .patient-stories {
+        .patient-stories__wrapper_pagelink {
+            padding: 45px 0 40px;
+            margin-bottom: 50px;
+            border-bottom: 1px dotted $dark-gray;
+        }
+        &__wrapper_heading{
+            padding-top: 50px;
+        }
+    }
+    .page-id-7 {
+        .trams-story_slider__wrap__inner {
+            .content {
+                background: url(./assets/images/Subtraction.png) no-repeat !important;
+                height: 100%;
+                width: 70%;
+                overflow: auto;
+                background-size: 100% 100% !important;
+                display: inline-block;
+                padding-right: 40px;
+                font-size: 15px;
+                line-height: 22px;
+                border-top-left-radius: 20px;
+                h2 {
+                    padding: 40px 0 20px !important;
+                }
+                ul {
+                    width: 100%;
+                    padding: 20px 0 !important;
+                }
+                .button {
+                    width: 100%;
+                    order: initial;
+                    padding: 20px 0 !important;
+                }
+            }
+        }
+    }
+}

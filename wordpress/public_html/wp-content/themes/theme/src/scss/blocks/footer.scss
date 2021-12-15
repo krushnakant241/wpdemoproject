@@ -1,0 +1,149 @@
+/* footer section */
+
+.site-footer {
+    padding: 54px 0 0;
+    background-color: $footer-grey;
+    .footer {
+        &__row {
+            font-family: $primary_font_family;
+            font-size: 14px;
+            line-height: 21px;
+            &__notice {
+                &__left {
+                    font-family: $primary_font_family;
+                    font-size: 10px;
+                    padding-top: 50px;
+                    padding-bottom: 35px;
+                    line-height: 15px;
+                }
+            }
+            .location {
+                padding-bottom: 30px;
+            }
+            .col-lg-3 {
+                max-width: 300px;
+            }
+            .trans_footer-title {
+                font-family: $SemiBold_font_family;
+                font-size: 16px;
+                text-transform: uppercase;
+                line-height: 24px;
+                border-bottom: 1px dashed $black;
+                padding-bottom: 18px;
+                margin-bottom: 18px;
+            }
+            a {
+                font-family: $primary_font_family;
+                font-size: 14px;
+                color: $dark-red;
+                text-decoration: none;
+                transition: all 400ms ease;
+                line-height: 21px;
+                &:hover {
+                    color: $black;
+                }
+            }
+            ul {
+                padding: 0;
+            }
+            .social_icon {
+                text-align: right;
+                li {
+                    display: inline-block;
+                    padding-left: 18px;
+                    a {
+                        font-size: 20px;
+                    }
+                }
+            }
+            .trams_footer_logo {
+                height: 237px;
+                width: 235px;
+                float: right;
+                margin-top: 20px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            .footer4_images {
+                display: inline-block;
+            }
+            .trams-footer_global {
+                width: 160px;
+                height: 83px;
+                float: right;
+                margin-top: 40px;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+            &__right {
+                .footer_quick_links {
+                    li {
+                        padding-bottom: 6px;
+                    }
+                }
+            }
+        }
+        ul.footer_quick_links li:nth-child(8) {
+
+            padding-bottom: 25px !important;
+        }
+        .postal_address {
+            padding-top: 25px;
+        }
+    }
+}
+
+@media(max-width:991px) {
+    .site-footer {
+        .footer {
+            &__row {
+                .col-lg-3 {
+                    width: 50%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .site-footer {
+        .footer {
+            .trans_footer-title {
+                margin-top: 20px;
+            }
+            &__row {
+                .col-lg-3 {
+                    width: 100%;
+                    max-width: 100%;
+                }
+                font-family: $primary_font_family;
+                font-size: 14px;
+                line-height: 21px;
+                justify-content: center;
+                .footer4_images {
+                    padding-bottom: 20px;
+                    display: flex;
+                    .trams_footer_logo {
+                        width: 150px;
+                        height: 155px;
+                    }
+                    .trams-footer_global {
+                        height: 155px;
+                        text-align: right;
+                        img {
+                            width: 80%;
+                            object-position: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

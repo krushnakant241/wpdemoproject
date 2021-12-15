@@ -1,0 +1,6 @@
+path: public_html/wp
+server:
+  docroot: public_html
+disabled_commands:
+  - db drop
+  - plugin install

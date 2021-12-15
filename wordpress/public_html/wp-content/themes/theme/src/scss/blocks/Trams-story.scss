@@ -1,0 +1,124 @@
+/* trams-story */
+
+.trams-story {
+    /* margin-top: 40px;*/
+    margin-bottom: 80px;
+    &_slider {
+        overflow: hidden;
+        &__wrap {
+            transition: all 700ms ease;
+            transform: scale(0.9);
+            border-radius: 20px;
+            &__inner {
+                border-radius: 20px;
+                .content {
+                    color: $white;
+                    max-width: 391px;
+                    background: url(./assets/images/Subtraction.png) no-repeat;
+                    padding-right: 40px;
+                    padding-top: 131px;
+                    padding-bottom: 130px;
+                    padding-left: 30px;
+                    font-family: $Medium_font_family;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 27px;
+                    border-bottom-left-radius: 20px;
+                    h2 {
+                        text-shadow: 0px 3px 3.5px rgba(0, 0, 0, 0.5);
+                        color: $white;
+                        padding-bottom: 40px !important;
+                        text-transform: uppercase;
+                    }
+                    .button {
+                        margin-top: 50px;
+                        margin-bottom: 20px;
+                    }
+                    ul {
+                        li {
+                            a {
+                                font-size: 14px;
+                                line-height: 24px;
+                                font-family: $Bold_font_family;
+                                color: $white;
+                                padding: 0 0 10px 7px;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .slick-center {
+            transform: scale(1);
+        }
+    }
+}
+
+@media (max-width:1199px) {
+    .trams-story {
+        &_slider {
+            &__wrap {
+                &__inner {
+                    .content {
+                        padding-top: 81px;
+                        padding-bottom: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .trams-story {
+        &_slider {
+            padding: 0 30px;
+            &__wrap {
+                transform: scale(1);
+                &__inner {
+                    min-height: 595px;
+                    .content {
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        max-width: 100%;
+                        background: url(./assets/images/mobile-trams-story_bg.png);
+                        position: absolute;
+                        bottom: 0;
+                        background-size: cover;
+                        height: 326px;
+                        overflow-x: auto;
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 0 15px;
+                        border-bottom-right-radius: 20px;
+                        h2 {
+                            padding-bottom: 0 !important;
+                            padding-top: 33px !important;
+                        }
+                        .button {
+                            margin-top: 0;
+                            margin-bottom: 0;
+                            width: 50%;
+                            order: 2;
+                            a {
+                                
+                                font-size: 13px;
+                                padding: 3px 9px;
+                                line-height: normal;
+                            }
+                        }
+                        ul {
+                            width: 50%;
+                            li {
+                                a {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

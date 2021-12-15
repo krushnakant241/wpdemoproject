@@ -1,0 +1,154 @@
+.global-collaborative {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    &__wrapper {
+        color: #000;
+        &__inner {
+            >h2 {
+                padding-bottom: 30px !important;
+            }
+            .top_content_wrap {
+                display: flex;
+                flex-wrap: wrap;
+                .left-content {
+                    width: 80%;
+                }
+                .right-content {
+                    width: 20%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .keypoint_content_wrap {
+                padding-top: 60px;
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 -100px;
+                &_inner {
+                    width: 50%;
+                    padding: 0 100px;
+                    margin-bottom: 60px;
+                    border-right: 2px dotted $dark-gray;
+                    &:nth-child(2n + 2) {
+                        border-right: 0px;
+                    }
+                    &:nth-child(3n + 3) {
+                        width: 100%;
+                        border-right: 0px;
+                        margin-bottom: 0;
+                    }
+                    .keypoint-content {
+                        .image {
+                            background-image: $base-gradient-color;
+                            height: 150px;
+                            width: 150px;
+                            border-radius: 100%;
+                            overflow: hidden;
+                            display: flex;
+                            align-content: center;
+                            justify-content: center;
+                            padding: 30px;
+                            img {
+                                object-fit: contain;
+                            }
+                        }
+                        h5 {
+                            text-transform: uppercase;
+                            font-family: $SemiBold_font_family;
+                            font-weight: 600;
+                            padding: 21px 0 !important;
+                        }
+                    }
+                }
+            }
+            .bottom_content_wrap {
+                padding: 30px 0 0;
+                ol {
+                    padding: 30px 0 0 21px !important;
+                    li {
+                        padding-bottom: 6px;
+                    }
+                }
+                strong {
+                    font-family: $SemiBold_font_family;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    .keypoint_content_wrap {
+        margin: 0 -30px !important;
+        &_inner {
+            padding: 0 30px !important;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .keypoint_content_wrap {
+        margin: 0 -15px !important;
+        &_inner {
+            padding: 0 15px !important;
+            .keypoint-content {
+                .image {
+                    height: 100px !important;
+                    width: 100px !important;
+                    padding: 15px !important;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
+    .keypoint_content_wrap {
+        margin: 0 0 !important;
+        padding-top: 0 !important;
+        &_inner {
+            width: 100% !important;
+            padding: 30px 0 30px !important;
+            border-right: 0px !important;
+            border-bottom: 2px dotted #707070;
+            margin-bottom: 0 !important;
+            .keypoint-content {
+                .image {
+                    height: 77px !important;
+                    width: 77px !important;
+                    padding: 15px !important;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+    .global-collaborative {
+        &__wrapper {
+            &__inner {
+                .top_content_wrap {
+                    flex-direction: column-reverse;
+                    .left-content,
+                    .right-content {
+                        width: 100%;
+                        padding: 5px 0 10PX 0;
+                    }
+                    .right-content {
+                        img {
+                            width: 142px;
+                            height: 73px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

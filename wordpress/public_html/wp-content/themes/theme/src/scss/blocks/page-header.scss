@@ -1,0 +1,114 @@
+/* page header */
+
+.page_header {
+    // margin-bottom: 40px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 915px;
+    &__top {
+        background: url(./assets/images/banner_top_image.png) no-repeat;
+        background-size: 100% 100%;
+        min-height: 230px;
+        background-position: top -20px center;
+        .row_content {
+            max-width: 404px;
+            padding-top: 30px;
+        }
+        p {
+            font-size: 24px;
+            font-family: $SemiBold_font_family;
+            color: $white;
+            line-height: 30px;
+        }
+    }
+    .content {
+        padding-top: 30px;
+        max-width: 345px;
+        .white {
+            color: $white;
+        }
+    }
+}
+
+.home {
+    .page_header {
+        h1 {
+            text-transform: uppercase;
+        }
+        .content {
+            max-width: 257px;
+            .white {
+                color: $white;
+            }
+        }
+    }
+}
+
+.page_header_mobile_bg {
+    display: none;
+}
+
+@media(max-width:1400px) {
+    .page_header {
+        min-height: 800px;
+    }
+}
+
+@media(max-width:1199px) {
+    .page_header {
+        min-height: 716px;
+        &__top {
+            p {
+                font-size: 18px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+@media(max-width:767px) {
+    .page_header_mobile_bg {
+        display: none;
+    }
+    .page_header {
+        /* background-position: top 150px center;*/
+        background-size: cover;
+        min-height: 407px;
+        &__top {
+            background: url(./assets/images/mobile-top-image.png) no-repeat;
+            background-size: 100% 100%;
+            min-height: 148px;
+            p {
+                font-size: 13px;
+                line-height: 15px;
+            }
+            .row_content {
+                max-width: 228px;
+                padding-top: 20px;
+                padding-left: 0;
+            }
+        }
+        .content {
+            max-width: 100%;
+            padding: 0;
+            padding-top: 15px;
+            h3 {
+                font-size: 15px !important;
+                font-family: $Medium_font_family;
+                line-height: 22px !important;
+            }
+        }
+    }
+    .page_header .content .white {
+        max-width: 142px;
+    }
+    .home {
+        .page_header {
+            min-height: 490px;
+            .content {
+                max-width: 100%;
+            }
+        }
+    }
+}
