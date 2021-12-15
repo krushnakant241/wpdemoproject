@@ -1,0 +1,23 @@
+---
+deployment:
+  tasks:
+    # Set the base path to the website's installation (location of the wp-config.php file)
+    - export BASEPATH=/home/tramssbmclient/public_html/
+
+    # set the name of the theme, if different from the default
+    - export THEMENAME=theme
+
+    # Deploy the theme changes.
+    - export THEMEPATH="${BASEPATH}/wp-content/themes"
+    - /bin/cp -r "wordpress/public_html/wp-content/themes/${THEMENAME}" "${THEMEPATH}/${THEMENAME}-new"
+    - /bin/mv "${THEMEPATH}/${THEMENAME}" "${THEMEPATH}/${THEMENAME}-old"
+    - /bin/mv "${THEMEPATH}/${THEMENAME}-new" "${THEMEPATH}/${THEMENAME}"
+    - /bin/rm -rf "${THEMEPATH}/${THEMENAME}-old"
+
+    # Deploy the mu-plugins changes.
+    - export MUPATH="${BASEPATH}/wp-content"
+    - export MUNAME=mu-plugins
+    - /bin/cp -r "wordpress/public_html/wp-content/${MUNAME}" "${MUPATH}/${MUNAME}-new"
+    - /bin/mv "${MUPATH}/${MUNAME}" "${MUPATH}/${MUNAME}-old"
+    - /bin/mv "${MUPATH}/${MUNAME}-new" "${MUPATH}/${MUNAME}"
+    - /bin/rm -rf "${MUPATH}/${MUNAME}-old"

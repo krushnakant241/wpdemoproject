@@ -1,0 +1,83 @@
+version: "3"
+#
+# Container_name should not be modified, in order to modify the container names
+# Adjust the APP_NAME variable in `.env`.
+#
+services:
+  #
+  # WordPress Web Server (PHP, Apache, etc)
+  #
+  wordpress:
+    container_name: ${APP_NAME:?err}-wordpress
+    build:
+      context: ${PWD}/.docker/build/WordPress
+      dockerfile: Dockerfile
+    volumes:
+      - ${PWD}/wordpress:/var/www/html
+      #- ${PWD}/.docker/build/WordPress/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: ${MYSQL_USER}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE}
+      WORDPRESS_DB_PREFIX: ${WP_DB_PREFIX}
+    ports:
+      - 8099:80
+    networks:
+      - devlocal
+
+  #
+  # Mariadb Database
+  #
+  db:
+    container_name: ${APP_NAME:?err}-db
+    image: mariadb:latest
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_RANDOM_ROOT_PASSWORD: '1'
+    volumes:
+      - ${PWD}/.data/mysql:/var/lib/mysql
+      - ${PWD}/.docker/docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+      - ${PWD}/backup:/backup
+    networks:
+      - devlocal
+  #
+  # Dummy SMTP Server (to allow WordPress to send emails, but not actually send)
+  #
+  smtp:
+    container_name: ${APP_NAME:?err}-smtp
+    image: mailhog/mailhog:latest
+    ports:
+      - 8029:8025
+      - 1029:1025
+    networks:
+      - devlocal
+  #
+  # Node-Js Theme Build Container
+  #
+  gulp:
+    container_name: ${APP_NAME:?err}-gulp
+    volumes:
+      - ${PWD}/wordpress:/app/wordpress
+      - ${PWD}/gulpfile.js:/app/gulpfile.js
+      - ${PWD}/package.json:/app/package.json
+      - ${PWD}/package-lock.json:/app/package-lock.json
+    build:
+      context: ${PWD}/.docker/build/Gulp
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+      - 3001:3001
+    networks:
+      - devlocal
+
+#
+# Network required as "localhost" so both internal network browsersync & local can "work"
+#
+networks:
+  devlocal:
+#   name: localhost
+    driver: bridge
+
